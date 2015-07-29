@@ -8,6 +8,7 @@ import (
 	"time"
 )
 
+// Objects implementing the http workers pool
 type Pool struct {
 	total, busy   uint
 	jobsChan      chan *job
