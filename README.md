@@ -10,7 +10,7 @@ $ cd /usr/local/go/src; sudo ./all.bash
 package main
 
 import (
-	"io"
+	"fmt"
 	"net/http"
 	"log"
 )
@@ -22,7 +22,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 var p *http.Pool
 
 func main() {
-	http.HandleFunc("/", HelloServer)
+	http.HandleFunc("/", handler)
 	p = http.NewPool(1000)
 	err := http.ListenAndServeWithPool(":8080", nil, p)
 	if err != nil {
