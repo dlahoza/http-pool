@@ -152,10 +152,10 @@ func (srv *Server) ListenAndServeWithPool(pool *Pool) error {
 //
 //      func main() {
 //              http.HandleFunc("/hello", HelloServer)
-//		p = http.NewPool(1000)
-//              err := http.ListenAndServe(":12345", nil, p)
+//		p := http.NewPool(1000)
+//              err := http.ListenAndServeWithPool(":12345", nil, p)
 //              if err != nil {
-//                      log.Fatal("ListenAndServe: ", err)
+//                      log.Fatal("ListenAndServeWithPool: ", err)
 //              }
 //      }
 func ListenAndServeWithPool(addr string, handler Handler, pool *Pool) error {
