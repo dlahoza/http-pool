@@ -1,12 +1,12 @@
 # http-pool
 Extension of net/http package from standard Go library with high performance pool manager
 ## Setup
-`
-sudo wget -O/usr/local/go/src/net/http/pool.go https://raw.githubusercontent.com/DLag/http-pool/master/pool.go
-cd /usr/local/go/src; sudo ./all.bash
-`
+```
+$ sudo wget -O/usr/local/go/src/net/http/pool.go https://raw.githubusercontent.com/DLag/http-pool/master/pool.go
+$ cd /usr/local/go/src; sudo ./all.bash
+```
 ##Example
-`
+```
 package main
 
 import (
@@ -29,4 +29,4 @@ func main() {
 		log.Fatal("ListenAndServeWithPool: ", err)
 	}
 }
-`
+```
